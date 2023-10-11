@@ -1,0 +1,56 @@
+select * from Products;
+
+select * from Orders
+where OrderData = 2023;
+
+select * from Employees
+where FirstName Like 'A%';
+
+select AVG(BirthDate) FROM Employees;
+
+select COUNT(Quantity), Quantity as Customer from  OrderDetails
+group by Quantity;
+
+delete from Orders
+where OrderDate = 2022;
+
+select ContactName, Address as info from Customers;
+
+select FirstName, BirthDate from Employees
+where BirthDate > 18
+order by desc ;
+
+select * from Employees
+limit 10;
+
+select ProductName from [Products]
+where ProductName Like '%on%'
+order by asc;
+
+select avg(price) from [Products];
+
+select ProductName, Quantity from Products
+where Quantity > 10;
+
+select * from Customers
+where Country = 'USA';
+
+select CategoryName from Categories
+group by CategoryName;
+
+select * from Products
+where ProductName like 'S%';
+
+select * from Products
+where Price between 50 and 100;
+
+select avg(Price) from Products;
+
+select * from Suppliers
+where Country in ('New York', 'Los Angeles');
+
+select * from [Suppliers]
+where PostalCode brtween 10000 and 19999;
+
+select * from [Suppliers]
+where Country <> 'USA';
